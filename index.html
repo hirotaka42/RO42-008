@@ -17,7 +17,7 @@
   
   
   <!-- ロゴ（ページ左上のサイト名の画像）　-->
-  <div id="logo"><h1>【RO42-008】【作品名:運搬ロボットアーム】</h1>
+  <div id="logo"><h1>【RO42-008】【作品名:汎用ロボットアーム】</h1>
     <!-- / #logo --></div>
   
   <!--　ナビゲーションメニュー（ヘッダー内のメインメニュー）ー-->
@@ -38,8 +38,7 @@
 <div id="container">
 
   <div id="home">
-  ★★★画像はJPEG-PNGのみのようなので差し替え予定★★★<br>
-  <img src="images/thumb.gif" width="600" height="600" alt="Thumbnail image" />
+  <img src="images/thumb.png" width="600" height="600" alt="Thumbnail image" />
   
   <!-- / #home --></div>
 
@@ -55,7 +54,7 @@
       </tr>
       <tr>
         <td class="header">作品名</td>
-        <td>運搬ロボットアーム</td>
+        <td>汎用ロボットアーム</td>
       </tr>
       <tr>
         <td class="header">グループ名</td>
@@ -81,15 +80,21 @@
     <o1>
     	<li>ジョイスティックによる操作</li>
     	ジョイスティックによる操作を実装した理由はやはり慣れ親しんだ操作感で操作できることにあります。3DCADソフトでの設計によりパーツの交換、修正、複製などが素早く行え誰でも気軽にモノづくりを体験することが可能になります。<br>
+    	<a href="images/gif_Joycon-min.gif" title="Joycon_GIF" target="_blank"><img src="images/gif_Joycon-min.gif" width="100%"  alt="Joycon_GIF"/></a>
     	<li>ボリューム操作</li>
     	本来このボリューム操作を完成形とし、HEWへ出典するつもりでしたが皆でアイディアを出し合っているうちにいつの間にか他の操作方法が出来上がっておりすべての操作方法の原点となった機能です。<br>
+    	<li>マスタースレーブ操作</li>
+    	マスタースレーブ操作ではマスター機の関節に組み込んだボリューム抵抗を動かし 操作対象となるスレーブ機ロボットアームのモータへ 角度として受け渡すことで実現しました。<br>
+    	<img src="images/gif_MasterSlaveOperator.gif" width="100%"  alt="MasterSlaveOperator_GIF"/></a>
+    	<a href="images/gif_MasterSlave-min.gif" title="MasterSlave_GIF" target="_blank"><img src="images/gif_MasterSlave-min.gif" width="100%"  alt="MasterSlave_GIF"/></a>
     	<li>位置記憶操作</li>
-    	<img src="images/img_location_memory.gif" width=100% alt="location_memory_IMG"/>
+    	位置記憶操作はデータ構造とアルゴリズムに力を入れて制作しました。これは人間の動作を模倣し継続的に繰り返すことができます。この位置記憶操作があればシンプルな動作はすべて任せることが可能です。<br>
+    	<a href="images/gif_LocationMemory-min.gif" title="LocationMemory_GIF" target="_blank"><img src="images/gif_LocationMemory-min.gif" width="100%"  alt="LocationMemory_GIF"/></a>
     	<br><br>
     	<li>Internet of Things: 略称 IoT 操作</li>
-    	インターネット経由の操作については今回 obnizOS(オブナイズ)を使用しました。obnizOSをざっくり説明するとIoT操作で一番面倒なweb Server通信の作成が不要でネットワークコネクションを作るだけで気軽にマイコンを制御できるOSです。
-    	この obnizOS 実はjavascriptでの記述がメインになっているので少しだけWebの知識があれば誰でもモノづくりを体験することが可能です。<br>
-    	今回これらを活用し、アームの操作軸となるサーボモータの制御をスライダーコントロールで実現しました。<br>
+    	インターネット経由の操作についてはobnizOS(オブナイズ)を使用しました。obnizOSを使用することでIoT操作で一番面倒なweb Server通信のプログラム作成が不要でネットワークコネクションを作るだけで気軽にマイコンを制御できます。
+    	このobnizOSは主にhtmlとjavascriptでの記述で操作ができるため少しだけWebの知識があれば誰でもモノづくりを体験することが可能です。
+    	今回これらを活用しアームの操作軸となるサーボモータの制御をWeb経由のスライダーコントロールで操作出来るようにしました。<br>
     	<p class="codepen" data-height="435" data-theme-id="light" data-default-tab="html,result" data-user="hirotaka42" data-slug-hash="JjbLPqP" style="height: 435px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RO42-008">
 		  <span>See the Pen <a href="https://codepen.io/hirotaka42/pen/JjbLPqP">
 		  RO42-008</a> by hirotaka42 (<a href="https://codepen.io/hirotaka42">@hirotaka42</a>)
@@ -133,7 +138,7 @@
     <h2>3.写真・動画</h2>
     <table class="ta1">
       <tr>
-        <td width="200" ><a href="images/samplemov.mp4"  title="sample" target="_blank">動画はこちら</a></td>
+        <td width="200" ><a href="images/samplemov.mp4" title="sample" target="_blank">動画はこちら</a></td>
         <td width="200" ><a href="images/img_sample2.jpg" title="sample" target="_blank"><img src="images/img_sample2.jpg" width="190"  alt="sample" /></a></td>
         <td width="200" ><a href="images/img_sample1.jpg" title="sample" target="_blank"><img src="images/img_sample1.jpg" width="190"  alt="sample" /></a></td>
 
