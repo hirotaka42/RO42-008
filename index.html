@@ -4,10 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Tyoe" content="text/javascript" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
 <title>RO42-008</title>
 <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>$(function() {
+　$('.Toggle').click(function() {
+   $(this).toggleClass('active');
+  $('.menu').toggleClass('open');
+ });
+});</script>
 </head>
 
 <body>
@@ -15,17 +23,27 @@
 <!--　ヘッダー（サイト名やサイトの内容を示す部分）　-->
 <div id="header">
   
-  
   <!-- ロゴ（ページ左上のサイト名の画像）　-->
   <div id="logo"><h1>【RO42-008】【作品名:汎用ロボットアーム】</h1>
-    <!-- / #logo --></div>
+  	<!-- / #logo --></div>
+  	<nav>
+	  <!-- ハンバーガーメニュー部分 --> 
+	  <div class="Toggle">
+		　　<span></span>
+		　　<span></span>
+		　　<span></span>
+		<!-- / #Toggle --></div>
+	  
+	  <!--　ナビゲーションメニュー（ヘッダー内のメインメニュー）ー-->
+	  <div id="menu"> 
+	  <ul>
+	   <li><a href="#home" class="active">Home</a></li>
+	   <li><a href="#category1">作品説明</a></li>
+	   <li><a href="#category2">アピールポイント</a></li>
+	   <li><a href="#category4">写真・動画</a></li>
+	  </ul>
+	</nav>
   
-  <!--　ナビゲーションメニュー（ヘッダー内のメインメニュー）ー-->
-  <div id="menu"> 
-  <a href="#home" class="active">Home</a> 
-  <a href="#category1">作品説明</a> 
-  <a href="#category2">アピールポイント</a> 
-  <a href="#category3">写真・動画</a> 
     <!-- / #menu --></div>
   
   <!-- / #header --></div>
@@ -38,7 +56,8 @@
 <div id="container">
 
   <div id="home">
-  <img src="images/thumb.png" width="600" height="600" alt="Thumbnail image" />
+  <br>
+  <p class="ThumbnailImage"><img src="images/thumb.png" width="80%" alt="Thumbnail image" /></p>
   
   <!-- / #home --></div>
 
@@ -71,7 +90,7 @@
     </table>
     <br>【プロジェクトの背景】
      <br> 今回のHEWではグループメンバ各個人が制作したいものを組み合わせて一つの作品を作ることを目標に制作しました。
-     役割分担に重点を置き、一人は詳細な3Dモデルの制作, 二人目は操作方法の策定, 三人目はプログラムの策定, これらを軸にしそれぞれが意見を出し合い、個人の実力を一番発揮できるところでそれぞれが個々に制作する。また相手の意見をできるだけ取り入れどうしたら実現できるかに注視しながら作業し、その結果できるだけアイディアに忠実な制作物が完成しました。<br><br>
+     役割分担に重点を置き、一人は詳細な3Dモデルの制作, 二人目は操作方法の策定, 三人目はプログラムの策定, これらを軸にしそれぞれが意見を出し合い、個人の実力を一番発揮できるところでそれぞれが個々に制作する。また相手の意見をできるだけ取り入れどうしたら実現できるかに注視しながら作業し、その結果できるだけアイディアに忠実な制作物が完成しました。<br>
   <!-- / #category1 --></div>
   
   <div id="category2">
@@ -135,7 +154,13 @@
   <!-- / #category2 --></div>
   
   <div id="category3">
-    <h2>3.写真・動画</h2>
+    <h2>3.最後に各々から一言!</h2>
+    <br>
+
+  <!-- / #category3 --></div>
+
+  <div id="category4">
+    <h2>4.写真・動画</h2>
     <table class="ta1">
       <tr>
         <td width="200" ><a href="images/samplemov.mp4" title="sample" target="_blank">動画はこちら</a></td>
@@ -149,14 +174,11 @@
         <td width="200" ><a href="images/img_sample2.jpg" title="sample" target="_blank"><img src="images/img_sample2.jpg" width="190"  alt="sample" /></a></td>
 
       </tr>
-    </table>
+    </table><br><br>
 
-  <!-- / #category3 --></div>
-  
 
-  
+  <!-- / #category4 --></div>
 
-    
   <!-- / #container --></div>
 
 <!--　ページの下部分　-->
