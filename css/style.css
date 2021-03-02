@@ -43,7 +43,7 @@ a:hover { /*リンクの文字設定(マウスをのせた時)*/
 	font-size: 2em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
 	font-weight: normal; /*フォントの太さ指定(normalは標準)*/
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 	#header h1 {
 	font-size: 1em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
@@ -100,7 +100,7 @@ nav{
  display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 
 	/*ナビゲーション部分*/
@@ -190,7 +190,7 @@ nav{
 	margin: 0 auto; /*ボックス外側の余白(値2つは左から上下,左右の値(左右autoで中央配置))*/
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 	#container { /*container(入れ物、容器)の中に各要素(ボックス)を配置*/
 	width: 90%; /*幅指定*/
@@ -258,73 +258,82 @@ nav{
 	border: solid 1px #c9171e; /*境界線の一括指定(solidは1本線,線の太さ,線の色)*/
 }
 
-/* ---- テーブルの設定 ----- */
+/* ---- 自作テーブルの設定 ----- */
 
-.ta1 {
-	width: 600px; /*幅指定*/
-	border-collapse: collapse; /*境界線の表示指定(collapseは重ねて表示)*/
-	margin: 0 auto; /*ボックス外側の余白(値2つは左から上下,左右の値(左右autoで中央配置))*/
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 60px auto 40px;
 }
-
-.ta1 td {
-	border: none; /*境界線の一括指定(noneはなし)*/
-	padding-bottom: 10px;
+table {
+  width: 600px; /*幅指定*/
+  margin: 0 auto;
 }
-
-
-.ta1 a:hover {
-	color: #000000; /*文字色指定*/
-	text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
-	cursor: url(../images/cur.png), pointer; /*カーソルの形状指定(url(画像ファイル)pointerはオリジナルカーソルが表示できない場合の指定)*/
-}
-
-.ta2 {
+.tbl-r02 {/* .tbl-r02 全体設定 */
 	table-layout: fixed;
 	border-collapse: collapse; /*境界線の表示指定(collapseは重ねて表示)*/
 	margin: 0 auto; /*ボックス外側の余白(値2つは左から上下,左右の値(左右autoで中央配置))*/
 }
 
-.ta2 th {
-	background-color: #ffd700; /*背景色指定*/
-	border: solid 1px #888084; /*境界線の一括指定(solidは1本線,線の太さ,線の色)*/
-	color: #000000; /*文字色設定*/
-	padding: 5px 10px; /*ボックス内側の余白(値2つは左から上下,左右の値)*/
-	font-size: 1em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
-	text-align: center; /*行の水平方向の揃え方(leftは左寄せ)*/
+.tbl-r02 th {/* 見出しth*/
+  background: #2A83C1;/*-- テーブル背景カラーブル2A83C1ー--*/
+  border: solid 0.8px #ccc;/*境界線の一括指定(solidは1本線,線の太さ,線の色)*/
+  color: #fff; /*-- テーブルFontカラーWhite--*/
+  padding: 10px;
+  text-align: center; /*行の水平方向の揃え方(leftは左寄せ)*/
+
+}
+.tbl-r02 td {/* 内容td */
+  border: solid 1px #888084; /*境界線の一括指定(solidは1本線,線の太さ,線の色) */
+  padding: 10px;
+  text-align: left; /*行の水平方向の揃え方(leftは左寄せ)*/
 }
 
-.ta2 tr.even td {
-	background-color: #f0e68c; /*背景色指定*/
+
+@media screen and (max-width: 640px) {
+	/* スマホ */
+  .last td:last-child {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+  .tbl-r02 {
+    width: 95%;
+  }
+  .tbl-r02 th,
+  .tbl-r02 td {
+　　border-bottom: none;
+    display: block;
+    width: 100%;
+  }
 }
 
-.ta2 td {
-	border: solid 1px #888084; /*境界線の一括指定(solidは1本線,線の太さ,線の色)*/
-	color: #000000; /*文字色設定*/
-	padding: 5px 10px; /*ボックス内側の余白(値2つは左から上下,左右の値)*/
-	font-size: 1em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
-	text-align: left; /*行の水平方向の揃え方(leftは左寄せ)*/
-}
+/* ---- 写真テーブル ---- */
+.tbl-picture{
+	width: 100%;
 
-.ta2 a {
-	color: #727171; /*文字色設定*/
-	text-decoration: underline; /*テキストの装飾指定(下線、上線など)(underlineは下線)*/
-}
-
-.ta2 a:hover {
-	color: #000000; /*文字色指定*/
-	text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
-}
-
-.ta2 td.header {
-   width: 10em;   /* セルの横幅 */
-   text-align: center;
 }
 
 /* ---- img レイアウト ---- */
 .ThumbnailImage img { width: 80%; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 	.ThumbnailImage img { width: 95%; }
 }
 
+
+/* ---- ステッチ風ボックス  ----*/
+.stitch {
+   color: #fff;
+   padding: 20px;
+   font-size: 0.9em;
+   width: 93%;
+   /* #FEA993 Pink  #B4C198*/
+   background: #2A83C1;
+   border: 2px dashed #F7F9CC;
+   border-radius: 10px;
+   box-shadow: 0 0 0 7px #2A83C1;
+   font-family: 'Hiragino Maru Gothic Pro','ヒラギノ丸ゴ Pro W4', sans-serif;
+}

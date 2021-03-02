@@ -40,7 +40,7 @@
 	   <li><a href="#home" class="active">Home</a></li>
 	   <li><a href="#category1">作品説明</a></li>
 	   <li><a href="#category2">アピールポイント</a></li>
-	   <li><a href="#category4">写真・動画</a></li>
+	   <li><a href="#category3">写真・動画</a></li>
 	  </ul>
 	</nav>
   
@@ -63,39 +63,41 @@
 
   <div id="category1">
   <h2>1.作品説明</h2>
-    <table class="ta2">
+    <table class="tbl-r02">
       <tr>
-        <th colspan="2">基本情報</th>
+        <th class="tbl-2" colspan="2">基本情報</th>
       </tr>
       <tr>
-        <td class="header">出展者番号</td>
+        <th>出展者番号(th)</th>
         <td>RO42-008</td>
       </tr>
       <tr>
-        <td class="header">作品名</td>
+        <th>作品名(th)</th>
         <td>汎用ロボットアーム</td>
       </tr>
       <tr>
-        <td class="header">グループ名</td>
+        <th>グループ名(th)</th>
         <td>ESP32</td>
       </tr>
       <tr>
-        <td class="header">メンバーリスト</td>
+        <th>メンバーリスト(th)</th>
         <td> 佐藤 航 / 洪 イ昕 / 兒玉 裕貴 </td>
       </tr>
-      <tr>
-        <td class="header">作品アピール</td>
+      <tr class="last">
+        <th>作品アピール(th)</th>
         <td>多種多様な操作(リモコン操作/ボリューム操作/位置記憶操作/ネットワーク操作(Internet of Things: 略称 IoT 操作))を実現したロボットアーム</td>
       </tr>
     </table>
-    <br>【プロジェクトの背景】
+    <br>
+    <p class="stitch">【プロジェクトの背景】
      <br> 今回のHEWではグループメンバ各個人が制作したいものを組み合わせて一つの作品を作ることを目標に制作しました。
-     役割分担に重点を置き、一人は詳細な3Dモデルの制作, 二人目は操作方法の策定, 三人目はプログラムの策定, これらを軸にしそれぞれが意見を出し合い、個人の実力を一番発揮できるところでそれぞれが個々に制作する。また相手の意見をできるだけ取り入れどうしたら実現できるかに注視しながら作業し、その結果できるだけアイディアに忠実な制作物が完成しました。<br>
+     役割分担に重点を置き、一人は詳細な3Dモデルの制作, 二人目は操作方法の策定, 三人目はプログラムの策定, これらを軸にしそれぞれが意見を出し合い、個人の実力を一番発揮できるところでそれぞれが個々に制作する。また相手の意見をできるだけ取り入れどうしたら実現できるかに注視しながら作業し、その結果できるだけアイディアに忠実な制作物が完成しました。</p><br>
+
   <!-- / #category1 --></div>
   
   <div id="category2">
     <h2>2.アピールポイント</h2>
-    一番のアピールポイントとして複数の操作方法に力を入れました。４つの操作方法があります。<br>
+    一番のアピールポイントは複数の操作方法です。操作方法は全部で5つあります。<br>
     <o1>
     	<li>ジョイスティックによる操作</li>
     	ジョイスティックによる操作を実装した理由はやはり慣れ親しんだ操作感で操作できることにあります。3DCADソフトでの設計によりパーツの交換、修正、複製などが素早く行え誰でも気軽にモノづくりを体験することが可能になります。<br>
@@ -124,7 +126,7 @@
 
     【3Dモデルデータ】<br>
     今回は3DCADソフト Fusion360 を使用し3Dモデルデータを作成,3Dプリンタで印刷,すべての部品を手作りで制作しました。その過程で穴の位置の設置ミスや印刷クオリティの向上で四苦八苦することがありました。<br>
-    <table border="1" cellspacing="0" cellpadding="1">
+    <table border="1" cellspacing="0" cellpadding="1" class="tbl-picture">
 	<tr>
 		<td><img src="images/3D_model01-min.png" width=100% alt="3D_model01-min"/></td>
 		<td><img src="images/3D_model02-min.png" width=100% alt="3D_model02-min"/></td>
@@ -132,7 +134,7 @@
 	</tr>
 	</table><br>
 
-	<table border="1" cellspacing="0" cellpadding="1">
+	 <table border="1" cellspacing="0" cellpadding="1" class="tbl-picture">
 	<td><img src="images/3D_model04-min.png" width=100% alt="3D_model04-min"/></td>
 		<td><img src="images/3D_model05-min.png" width=100% alt="3D_model05-min"/></td>
 		<td><img src="images/3D_model06-min.png" width=100% alt="3D_model06-min"/></td>
@@ -144,7 +146,7 @@
 
     【基盤配線】<br>
     配線については電源系統を一つにまとめできるだけ簡素化しました。また配線の再配置など柔軟に対応するべく広く一般的に使用されているJST規格のXHコネクタを採用<br>
-    <table border="1" cellspacing="0" cellpadding="1">
+    <table border="1" cellspacing="0" cellpadding="1" class="tbl-picture">
 	<tr>
 		<td><img src="images/img_PCB_main.jpg" width=100% alt="PCB_main"/></td>
 		<td><img src="images/img_PCB_sub.jpg" width=100% alt="PCB_sub"/></td>
@@ -158,11 +160,11 @@
   
   <div id="category3">
     <h2>3.写真・動画</h2>
-    <table class="ta1">
+    <table class="tbl-picture">
       <tr>
-        <td width="200" ><a href="images/img_photo01-min.jpg" title="sample" target="_blank"><img src="images/img_photo01-min.jpg" width="190"  alt="sample" /></a></td>
-        <td width="200" ><a href="images/img_photo02-min.jpg" title="sample" target="_blank"><img src="images/img_photo02-min.jpg" width="190"  alt="sample" /></a></td>
-        <td width="200" ><a href="images/img_photo03-min.jpg" title="sample" target="_blank"><img src="images/img_photo03-min.jpg" width="190"  alt="sample" /></a></td>
+        <td><a href="images/img_photo01-min.jpg" title="img_photo01-min" target="_blank"><img src="images/img_photo01-min.jpg" width="190"  alt="img_photo01-min" /></a></td>
+        <td><a href="images/img_photo02-min.jpg" title="img_photo02-min" target="_blank"><img src="images/img_photo02-min.jpg" width="190"  alt="img_photo02-min" /></a></td>
+        <td><a href="images/img_photo03-min.jpg" title="img_photo03-min" target="_blank"><img src="images/img_photo03-min.jpg" width="190"  alt="img_photo03-min" /></a></td>
 
       </tr>
     </table><br><br>
